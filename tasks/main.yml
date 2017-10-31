@@ -1,2 +1,12 @@
 ---
 # tasks file for openjdk
+- name: 'Check if test file exists'
+  stat:
+   path: ~/testfile
+  register: st
+
+- name: 'Create test file if not exists'
+  file:
+   path: ~/testfile
+   state: touch
+  when: not st.stat.exists

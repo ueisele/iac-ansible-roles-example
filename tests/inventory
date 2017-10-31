@@ -1,1 +1,4 @@
-localhost
+localhost ansible_connection=local
+
+[test-kitchen]
+role_openjdk_test ansible_connection=docker

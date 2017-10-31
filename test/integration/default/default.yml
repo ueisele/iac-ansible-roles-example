@@ -1,0 +1,13 @@
+---
+- hosts: test-kitchen
+  remote_user: kitchen
+#   pre_tasks:
+
+  roles:
+   - role: openjdk
+
+  post_tasks:
+  - name: 'Ensure file exists'
+    file:
+     path: ~/testfile
+     state: file

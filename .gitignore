@@ -3,3 +3,7 @@
 out/
 *.iml
 *.iws
+
+# Test Kitchen
+.kitchen/
+.kitchen.local.yml
